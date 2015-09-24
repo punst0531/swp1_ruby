@@ -11,7 +11,7 @@ loop do
       puts "input your name"
         student[:name] = gets.chomp
       
-      puts "input your gender "
+      puts "input your gender (male or female) "
         gender = gets.chomp
         if gender == "male"
         student[:gender] = "male"
@@ -21,11 +21,13 @@ loop do
         student[:gender] = "male"
         end
       
+      puts "input your phone number"
+       student[:number] = gets.chomp
       
       member << student
       
       member.each_with_index do |x, index|
-      puts "#{index + 1}. Name: #{x[:name]} Gender: #{x[:gender]}"
+      puts "#{index + 1}. Name: #{x[:name]} , Gender: #{x[:gender]} , Phone : #{x[:number]}"
       end
      
      
@@ -39,7 +41,7 @@ loop do
       member.delete_at(-1 + delNumber.to_i)
   
       member.each_with_index do |x, index|
-      puts "#{index + 1}. Name: #{x[:name]} Gender: #{x[:gender]}"
+      puts "#{index + 1}. Name: #{x[:name]} Gender: #{x[:gender]} Phone : #{x[:number]}"
       end
   end
   
