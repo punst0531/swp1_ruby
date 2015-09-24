@@ -21,7 +21,8 @@ link_tags.each do |link|
     articles.each do |article|
     mainbody.push article.text
     end
-
+    
+    print "내용 :"
     puts mainbody
 
     
